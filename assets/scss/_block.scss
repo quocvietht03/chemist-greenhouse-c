@@ -1,0 +1,132 @@
+.pj-hero {
+  &--section {
+    background-color: $CGH-Green;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 280px 0 170px;
+  }
+  &--content {
+    max-width: 615px;
+  }
+  &--headline {
+    color: #FFFFFF;
+    margin: 0 0 5px;
+    span {
+      color: $CGH-Yellow;
+    }
+  }
+  &--sub-headline {
+    color: $CGH-Yellow;
+    margin: 0 0 5px;
+  }
+  &--desc {
+    color: #FFFFFF;
+    margin-bottom: 41px;
+  }
+}
+
+.pj-introduce {
+  &--section {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+  }
+  &--content {
+    text-align: center;
+    background: $White-Gradient;
+    padding: 70px 30px;
+    border-radius: 70px;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+  }
+  &--headline {
+    max-width: 1018px;
+    margin: 0 auto 7px;
+  }
+  &--desc {
+    max-width: 1018px;
+    margin: 0 auto 41px;
+  }
+  &--featrue-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1160px;
+    margin: 0 auto 41px;
+  }
+  &--featrue-item {
+    width: calc(25% - 23px);
+    .pj-featue-image {
+      width: auto;
+      height: 115px;
+      margin-bottom: 22px;
+    }
+    .pj-featue-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+.pj-our-service {
+  &--section {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+  }
+  &--headline {
+    margin: 0 0 55px;
+  }
+  &--image-feature {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    &.pj-content-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  &--image-wrap {
+    width: calc(50% + 15px);
+  }
+  &--image {
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 60px;
+    box-shadow: 10.1px 3.5px 25px 0px rgba(31, 65, 66, 0.40);
+    .pj-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &--feature-wrap {
+    width: calc(50% - 15px);
+    max-width: 522px;
+  }
+  &--featrue-list {
+    margin-bottom: 43px;
+  }
+  &--featrue-item {
+    padding: 16px 0;
+    border-bottom: 2.5px solid rgba(0, 28, 15, 0.70);
+    &.pj-is-active {
+      .pj-featue-title {
+        color: $CGH-Green;
+        opacity: 1;
+      }
+      .pj-featue-desc {
+        display: block;
+      }
+    }
+    .pj-featue-title {
+      font-size: 23px;
+      text-transform: uppercase;
+      color: $CGH-Forest;
+      opacity: 0.4;
+      cursor: pointer;
+      margin: 0;
+    }
+    .pj-featue-desc {
+      display: none;
+      margin-top: 16px;
+    }
+  }
+}

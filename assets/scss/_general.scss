@@ -1,0 +1,64 @@
+body {
+  font-family: $main-font;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 176.471%;
+  color: $CGH-Forest;
+  background: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $head-font;
+  font-weight: 400;
+  line-height: 116.2%;
+}
+h1 {
+  font-size: 134px;
+  line-height: 96.2%;
+}
+h2 {
+  font-size: 44.8px;
+}
+h3 {
+  font-size: 41px;
+}
+h4 {
+  font-size: 23px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 18px;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+input, textarea {
+  outline: none !important;
+}
+
+.pj-container {
+  max-width: 1334px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.pj-btn {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #FFFFFF;
+  background: $CGH-Green;
+  padding: 15px 30px;
+  border-radius: 60px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+  &--yellow {
+    color: $CGH-Forest;
+    background: $CGH-Yellow;
+  }
+}

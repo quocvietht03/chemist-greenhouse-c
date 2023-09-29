@@ -1,0 +1,109 @@
+.pj-site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 9999;
+  .admin-bar & {
+    top: 32px;
+  }
+  &.pj-is-sticky {
+    padding: 60px 0;
+    .pj-main-header {
+      background: #FFF;
+      border-radius: 110px;
+      padding: 25px 46px;
+      box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+      .pj-site-logo {
+        width: 236px;
+        .pj-site-logo-link .pj-site-logo-image {
+          width: 145px;
+          opacity: 0;
+          &--sticky {
+            opacity: 1;
+          }
+        }
+      }
+      .pj-primary-menu {
+        width: calc(100% - 236px);
+        .pj-menu-wrapper li a {
+          color: $CGH-Forest;
+        }
+      }
+    }
+  }
+  .pj-main-header {
+    display: flex;
+    align-items: center;
+    padding: 36px 0;
+    .pj-site-logo {
+      width: 305px;
+      text-align: right;
+      -webkit-transition: width .3s;
+      transition: width .3s;
+      .pj-site-title {
+        font-size: 40px;
+      }
+      .pj-site-logo-link {
+        position: relative;
+        display: inline-block;
+        line-height: 0;
+        margin-top: -15px;
+        .pj-site-logo-image {
+          width: 215px;
+          height: auto;
+          -webkit-transition: width .3s;
+          transition: width .3s;
+          &--sticky {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .pj-primary-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: calc(100% - 305px);
+      .pj-menu-wrapper {
+        font-family: inherit;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 50px;
+        li a {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: normal;
+          color: #FFFFFF;
+        }
+      }
+      .pj-extra-buttons {
+        margin-left: 30px;
+      }
+    }
+  }
+  @media(max-width: $screen-large) {
+    &.pj-is-sticky .pj-main-header {
+      .pj-site-logo,
+      .pj-primary-menu {
+        width: unset;
+      }
+    }
+    .pj-main-header {
+      justify-content: space-between;
+      .pj-site-logo,
+      .pj-primary-menu {
+        width: unset;
+      }
+    }
+  }
+  @media(max-width: $screen-sm-tablet) {
+
+  }
+}

@@ -1,0 +1,73 @@
+.pj-site-footer {
+  background: $CGH-Forest;
+  padding: 45px 0 40px;
+  .pj-main-footer {
+    display: flex;
+    gap: 30px;
+    .pj-footer-block {
+      &--logo,
+      &--subscribe {
+        width: 30%;
+      }
+      &--links {
+        width: 50%;
+        .pj-footer-block--content {
+          display: flex;
+          gap: 19px;
+          >div {
+            width: 50%;
+          }
+        }
+      }
+      &--headline {
+        font-family: $main-font;
+        font-size: 29.7px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+      }
+      .pj-site-logo-link {
+        display: inline-block;
+        line-height: 0;
+        margin-top: -3px;
+      }
+      .pj-menu-wrapper {
+        font-family: inherit;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li:not(:last-child) {
+          margin-bottom: 19px;
+        }
+        a {
+          font-size: 20px;
+          font-weight: 400;
+          color: #FFFFFF;
+        }
+      }
+      form.tnp-subscription {
+        margin: 0;
+        label {
+          display: none;
+        }
+        div.tnp-field {
+          margin-bottom: 16px;
+        }
+        .tnp-email {
+          padding: 10px 25px;
+          background: $White-Gradient;
+          border-radius: 15px;
+          border: 1px solid $Mint-Green;
+        }
+        .tnp-submit {
+          @extend .pj-btn;
+          @extend .pj-btn--yellow;
+          font-family: inherit;
+          font-size: 16px;
+          min-width: 169px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

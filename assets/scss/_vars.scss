@@ -1,0 +1,19 @@
+/* Screen */
+$screen-large: 1200px - 0.02;
+$screen-tablet: 1024px - 0.02;
+$screen-sm-tablet: 992px - 0.02;
+$screen-mb: 768px - 0.02;
+$screen-mb-small: 480px - 0.02;
+
+/* Color */
+$CGH-Green: #007341;
+$CGH-Yellow: #D9D823;
+$CGH-Forest: #001C0F;
+$Mint-Green: #CCE3D9;
+$gradient-green: linear-gradient(90deg, #007341 0%, #001C0F 107.5%);
+$White-Gradient: linear-gradient(107deg, #F1F1F1 10.59%, #F0EEEE 82.49%);
+$Green-gradient: linear-gradient(180deg, #007341 0%, #001C0F 100%);
+
+/* Fonts */
+$main-font: 'Oswald';
+$head-font: 'Bebas Neue';
