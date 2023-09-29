@@ -26,7 +26,6 @@ add_action( 'wp_enqueue_scripts', 'pj_enqueue_scripts', 100 );
 
 function pj_admin_enqueue_scripts() {
   wp_enqueue_style( 'admin-style-css', PJ_URI . '/assets/css/admin-style.css', false, PJ_VERSION );
-  wp_enqueue_script( 'block-js', PJ_URI . '/assets/js/block.js', ['jquery'], PJ_VERSION, true );
 }
 add_action( 'admin_enqueue_scripts', 'pj_admin_enqueue_scripts', 100 );
 

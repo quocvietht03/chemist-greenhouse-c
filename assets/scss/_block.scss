@@ -4,7 +4,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 280px 0 170px;
+    padding: 280px 0 130px;
+    .pj-container {
+      max-width: 1254px;
+    }
   }
   &--content {
     max-width: 615px;
@@ -64,6 +67,11 @@
     .pj-featue-title {
       font-size: 20px;
       font-weight: 600;
+    }
+  }
+  @media(max-width: $screen-mb) {
+    &--featrue-item {
+      width: calc(50% - 15px);
     }
   }
 }
@@ -127,6 +135,16 @@
     .pj-featue-desc {
       display: none;
       margin-top: 16px;
+    }
+  }
+  @media(max-width: $screen-sm-tablet) {
+    &--image-feature {
+      flex-direction: column !important;
+    }
+    &--image-wrap,
+    &--feature-wrap {
+      width: 100%;
+      max-width: unset;
     }
   }
 }

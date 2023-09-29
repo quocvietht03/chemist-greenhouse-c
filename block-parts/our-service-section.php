@@ -11,6 +11,8 @@ $cta_button = get_field('cta_button');
 $content_reverse = get_field('content_reverse');
 $bg_color = get_field('background_color');
 $bg_image = get_field('background_image');
+$pd_top = get_field('padding_top');
+$pd_bottom = get_field('padding_bottom');
 
 $style = array();
 if(!empty($bg_color)) {
@@ -21,8 +23,38 @@ if(!empty($bg_image)) {
   $style[] = "background-image: url({$bg_image})";
 }
 
+$style_md = array();
+if(!empty($pd_top)) {
+  $style_md[] = "padding-top: calc({$pd_top}px * 0.75)";
+}
+
+if(!empty($pd_bottom)) {
+  $style_md[] = "padding-bottom: calc({$pd_bottom}px * 0.75)";
+}
+
+$style_sm = array();
+if(!empty($pd_top)) {
+  $style_sm[] = "padding-top: calc({$pd_top}px * 0.55)";
+}
+
+if(!empty($pd_bottom)) {
+  $style_sm[] = "padding-bottom: calc({$pd_bottom}px * 0.55)";
+}
+
 if(!empty($style)) {
-  echo '<style>#pj-our-service--' . $block['id'] . '{' . implode(';', $style) . '}</style>';
+  echo '<style>';
+  echo '#pj-hero--' . $block['id'] . '{' . implode(';', $style) . '}';
+  if(!empty($style_md)) {
+    echo '@media(max-width: 991.98px) {
+            #pj-hero--' . $block['id'] . '{' . implode(';', $style_md) . '}
+          }';
+  }
+  if(!empty($style_sm)) {
+    echo '@media(max-width: 767.98px) {
+            #pj-hero--' . $block['id'] . '{' . implode(';', $style_sm) . '}
+          }';
+  }
+  echo '</style>';
 }
 ?>
 <section id="<?php echo 'pj-our-service--' . $block['id']; ?>" class="pj-block pj-our-service--section">

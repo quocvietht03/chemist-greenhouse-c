@@ -3,9 +3,12 @@
 
 	/* Toggle menu mobile */
 	function PjToggleMenuMobile() {
-		$('.bt-header .bt-header-mobile .bt-menu-toggle').on('click', function() {
-			$(this).toggleClass('active');
-			$('.bt-header .bt-menu-mobile').toggle('slow');
+		$('.pj-menu-mb-toggle--open').on('click', function() {
+			$('.pj-site-header').addClass('pj-is-active-mb-menu');
+		});
+
+    $('.pj-menu-mb-toggle--close').on('click', function() {
+			$('.pj-site-header').removeClass('pj-is-active-mb-menu');
 		});
 	}
 
@@ -45,6 +48,7 @@
 
 	jQuery(document).ready(function($) {
 		PjHeaderStick();
+    PjToggleMenuMobile();
 
 	});
 
