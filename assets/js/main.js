@@ -33,13 +33,12 @@
 
 	/* Easy Scroll */
 	function PjEasingScroll() {
-    var heightSticky = $('.pj-site-header').innerHeight() - 40;
 		var $root = $('html, body');
 		$('.pj-primary-menu ul.pj-menu-wrapper > li > a').on('click', function(e) {
 			e.preventDefault();
 			var href = $.attr(this, 'href');
 			$root.animate({
-				scrollTop: $(href).offset().top - heightSticky
+				scrollTop: $(href).offset().top
 			});
 			return false;
 		});
