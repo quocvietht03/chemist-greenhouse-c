@@ -9,15 +9,16 @@
 
         if($(this).parent().hasClass('pj-is-active')) {
           $(this).parent().removeClass('pj-is-active');
-					$('.pj-our-service--image-js').removeClass('pj-is-active');
-					$('.pj-our-service--image-js[data-index="default"]').addClass('pj-is-active')
+
+					$(this).parents('.pj-our-service--image-feature-js').find('.pj-our-service--image-js').removeClass('pj-is-active');
+					$(this).parents('.pj-our-service--image-feature-js').find('.pj-our-service--image-js[data-index="default"]').addClass('pj-is-active')
 
         } else {
           $(this).parents('.pj-accordion-list-js').find('.pj-accordion-item-js').removeClass('pj-is-active');
     			$(this).parent().addClass('pj-is-active');
 
-					$('.pj-our-service--image-js').removeClass('pj-is-active');
-					$('.pj-our-service--image-js[data-index="' + index + '"]').addClass('pj-is-active')
+					$(this).parents('.pj-our-service--image-feature-js').find('.pj-our-service--image-js').removeClass('pj-is-active');
+					$(this).parents('.pj-our-service--image-feature-js').find('.pj-our-service--image-js[data-index="' + index + '"]').addClass('pj-is-active')
         }
   		});
     }

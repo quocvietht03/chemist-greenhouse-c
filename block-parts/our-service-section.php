@@ -73,7 +73,7 @@ if(!empty($style)) {
             <?php echo $headline; ?>
           </h3>
         <?php } ?>
-        <div class="pj-our-service--image-feature <?php if(!empty($content_reverse)) echo 'pj-content-reverse'; ?>">
+        <div class="pj-our-service--image-feature pj-our-service--image-feature-js <?php if(!empty($content_reverse)) echo 'pj-content-reverse'; ?>">
           <div class="pj-our-service--image-wrap">
             <?php if(!empty($image)){ ?>
               <div class="pj-our-service--image pj-our-service--image-js" data-index="default">
