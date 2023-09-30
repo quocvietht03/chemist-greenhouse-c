@@ -22,29 +22,29 @@ if(!empty($bg_image)) {
   $style[] = "background-image: url({$bg_image})";
 }
 
-if(!empty($pd_top)) {
+if(!empty($pd_top) || $pd_top == '0') {
   $style[] = "padding-top: {$pd_top}px";
 }
 
-if(!empty($pd_bottom)) {
+if(!empty($pd_bottom) || $pd_bottom == '0') {
   $style[] = "padding-bottom: {$pd_bottom}px";
 }
 
 $style_md = array();
-if(!empty($pd_top)) {
+if(!empty($pd_top) || $pd_top == '0') {
   $style_md[] = "padding-top: calc({$pd_top}px * 0.75)";
 }
 
-if(!empty($pd_bottom)) {
+if(!empty($pd_bottom) || $pd_bottom == '0') {
   $style_md[] = "padding-bottom: calc({$pd_bottom}px * 0.75)";
 }
 
 $style_sm = array();
-if(!empty($pd_top)) {
+if(!empty($pd_top) || $pd_top == '0') {
   $style_sm[] = "padding-top: calc({$pd_top}px * 0.55)";
 }
 
-if(!empty($pd_bottom)) {
+if(!empty($pd_bottom) || $pd_bottom == '0') {
   $style_sm[] = "padding-bottom: calc({$pd_bottom}px * 0.55)";
 }
 
@@ -64,7 +64,7 @@ if(!empty($style)) {
   echo '</style>';
 }
 ?>
-<section id="<?php echo 'pj-hero--' . $block['id']; ?>" class="pj-block pj-hero--section">
+<section id="<?php echo 'pj-hero--' . $block['id']; ?>" class="pj-block pj-block--section pj-hero--section">
     <div class="pj-container">
       <div class="pj-hero--content">
         <?php if(!empty($headline)) { ?>

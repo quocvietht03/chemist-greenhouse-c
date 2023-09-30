@@ -1,10 +1,22 @@
+.pj-block--section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @media(max-width: $screen-sm-tablet) {
+    padding-top: calc(80px * 0.75);
+    padding-bottom: calc(80px * 0.75);
+  }
+  @media(max-width: $screen-mb) {
+    padding-top: calc(80px * 0.55);
+    padding-bottom: calc(80px * 0.55);
+  }
+}
+
 .pj-hero {
   &--section {
     background-color: $CGH-Green;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 280px 0 130px;
     .pj-container {
       max-width: 1254px;
     }
@@ -32,7 +44,6 @@
 .pj-introduce {
   &--section {
     background-color: #FFFFFF;
-    padding: 80px 0;
   }
   &--content {
     text-align: center;
@@ -79,7 +90,6 @@
 .pj-our-service {
   &--section {
     background-color: #FFFFFF;
-    padding: 80px 0;
   }
   &--headline {
     margin: 0 0 55px;

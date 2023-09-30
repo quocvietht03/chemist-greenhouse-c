@@ -70,9 +70,9 @@ input, textarea {
 }
 
 .pj-container {
-  max-width: 1334px;
+  max-width: $container-width;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 $container-padding;
 }
 .pj-btn {
   display: inline-block;

@@ -23,41 +23,49 @@ if(!empty($bg_image)) {
   $style[] = "background-image: url({$bg_image})";
 }
 
+if(!empty($pd_top) || $pd_top == '0') {
+  $style[] = "padding-top: {$pd_top}px";
+}
+
+if(!empty($pd_bottom) || $pd_bottom == '0') {
+  $style[] = "padding-bottom: {$pd_bottom}px";
+}
+
 $style_md = array();
-if(!empty($pd_top)) {
+if(!empty($pd_top) || $pd_top == '0') {
   $style_md[] = "padding-top: calc({$pd_top}px * 0.75)";
 }
 
-if(!empty($pd_bottom)) {
+if(!empty($pd_bottom) || $pd_bottom == '0') {
   $style_md[] = "padding-bottom: calc({$pd_bottom}px * 0.75)";
 }
 
 $style_sm = array();
-if(!empty($pd_top)) {
+if(!empty($pd_top) || $pd_top == '0') {
   $style_sm[] = "padding-top: calc({$pd_top}px * 0.55)";
 }
 
-if(!empty($pd_bottom)) {
+if(!empty($pd_bottom) || $pd_bottom == '0') {
   $style_sm[] = "padding-bottom: calc({$pd_bottom}px * 0.55)";
 }
 
 if(!empty($style)) {
   echo '<style>';
-  echo '#pj-hero--' . $block['id'] . '{' . implode(';', $style) . '}';
+  echo '#pj-our-service--' . $block['id'] . '{' . implode(';', $style) . '}';
   if(!empty($style_md)) {
     echo '@media(max-width: 991.98px) {
-            #pj-hero--' . $block['id'] . '{' . implode(';', $style_md) . '}
+            #pj-our-service--' . $block['id'] . '{' . implode(';', $style_md) . '}
           }';
   }
   if(!empty($style_sm)) {
     echo '@media(max-width: 767.98px) {
-            #pj-hero--' . $block['id'] . '{' . implode(';', $style_sm) . '}
+            #pj-our-service--' . $block['id'] . '{' . implode(';', $style_sm) . '}
           }';
   }
   echo '</style>';
 }
 ?>
-<section id="<?php echo 'pj-our-service--' . $block['id']; ?>" class="pj-block pj-our-service--section">
+<section id="<?php echo 'pj-our-service--' . $block['id']; ?>" class="pj-block pj-block--section pj-our-service--section">
     <div class="pj-container">
       <div class="pj-our-service--content">
         <?php if(!empty($headline)) { ?>

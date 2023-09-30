@@ -111,12 +111,17 @@
       }
     }
   }
-
   @media(max-width: $screen-sm-tablet) {
     &.pj-is-sticky {
       padding-top: 30px;
-      .pj-main-header .pj-menu-mb-toggle--open .icon {
-        color: $CGH-Forest;
+      .pj-main-header {
+        padding: 20px 36px;
+        .pj-site-logo .pj-site-logo-link .pj-site-logo-image {
+          width: 110px;
+        }
+        .pj-menu-mb-toggle--open .icon {
+          color: $CGH-Forest;
+        }
       }
     }
     &.pj-is-active-mb-menu {
@@ -131,6 +136,7 @@
     }
     .pj-main-header {
       justify-content: space-between;
+      padding: 26px 36px;
       .pj-site-logo {
         width: 60%;
         max-width: 150px;
