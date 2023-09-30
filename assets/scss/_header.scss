@@ -1,3 +1,16 @@
+.pj-anchor-hook {
+  transform: translateY(-173px);
+  .admin-bar & {
+    transform: translateY(-205px);
+  }
+  @media(max-width: $screen-sm-tablet) {
+    transform: translateY(-116px);
+    .admin-bar & {
+      transform: translateY(-148px);
+    }
+  }
+}
+
 .pj-site-header {
   position: fixed;
   top: 0;

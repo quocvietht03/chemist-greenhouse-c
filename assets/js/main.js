@@ -34,7 +34,7 @@
 	/* Easy Scroll */
 	function PjEasingScroll() {
 		var $root = $('html, body');
-		$('.pj-primary-menu ul.pj-menu-wrapper > li > a').on('click', function(e) {
+		$('.pj-booking--btn, .pj-primary-menu ul.pj-menu-wrapper > li > a').on('click', function(e) {
 			e.preventDefault();
 			var href = $.attr(this, 'href');
 			$root.animate({
