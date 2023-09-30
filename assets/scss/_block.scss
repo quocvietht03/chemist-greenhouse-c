@@ -1,3 +1,8 @@
+.page-template-page-acf-builder .container-gform {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .pj-block--section {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -38,6 +43,16 @@
   &--desc {
     color: #FFFFFF;
     margin-bottom: 41px;
+  }
+  @media(max-width: $screen-sm-tablet) {
+    &--content {
+      max-width: 480px;
+    }
+  }
+  @media(max-width: $screen-mb) {
+    &--content {
+      max-width: 420px;
+    }
   }
 }
 
