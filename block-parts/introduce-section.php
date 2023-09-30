@@ -63,7 +63,13 @@ if(!empty($style)) {
   }
   echo '</style>';
 }
+
+$anchor_id = get_field('anchor_id');
+if(!empty($anchor_id)) {
+  echo '<div id="' . $anchor_id . '" class="pj-anchor-hook"></div>';
+}
 ?>
+
 <section id="<?php echo 'pj-introduce--' . $block['id']; ?>" class="pj-block pj-block--section pj-introduce--section">
     <div class="pj-container">
       <div class="pj-introduce--content">

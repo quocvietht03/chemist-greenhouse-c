@@ -33,14 +33,13 @@
 
 	/* Easy Scroll */
 	function PjEasingScroll() {
+    var heightSticky = $('.pj-site-header').innerHeight() - 40;
 		var $root = $('html, body');
-		$('.bt-easing-scroll ul.menu > li > a').on('click', function(e) {
+		$('.pj-primary-menu ul.pj-menu-wrapper > li > a').on('click', function(e) {
 			e.preventDefault();
 			var href = $.attr(this, 'href');
 			$root.animate({
-				scrollTop: $(href).offset().top
-			}, 700, function() {
-				window.location.hash = href;
+				scrollTop: $(href).offset().top - heightSticky
 			});
 			return false;
 		});
@@ -49,6 +48,7 @@
 	jQuery(document).ready(function($) {
 		PjHeaderStick();
     PjToggleMenuMobile();
+    PjEasingScroll();
 
 	});
 
