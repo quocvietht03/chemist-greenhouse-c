@@ -76,18 +76,26 @@ if(!empty($style)) {
         <div class="pj-our-service--image-feature <?php if(!empty($content_reverse)) echo 'pj-content-reverse'; ?>">
           <div class="pj-our-service--image-wrap">
             <?php if(!empty($image)){ ?>
-              <div class="pj-our-service--image">
+              <div class="pj-our-service--image pj-our-service--image-js" data-index="default">
                 <img src="<?php echo $image['url'] ?>" class="pj-image" alt="<?php echo $image['title'] ?>">
+              </div>
+            <?php } ?>
+
+            <?php foreach ($feature_list as $key =>$feature) { ?>
+              <div class="pj-our-service--image pj-our-service--image-js <?php if(!empty($feature['is_active'])) echo 'pj-is-active'; ?>" data-index="<?php echo 'pj-index-' . $key; ?>">
+                <?php if(!empty($feature['image'])){ ?>
+                  <img src="<?php echo $feature['image']['url'] ?>" class="pj-image" alt="<?php echo $feature['image']['title'] ?>">
+                <?php } ?>
               </div>
             <?php } ?>
           </div>
           <div class="pj-our-service--feature-wrap">
             <?php if(!empty($feature_list)){ ?>
               <div class="pj-our-service--featrue-list pj-accordion-list-js">
-                <?php foreach ($feature_list as $feature) { ?>
+                <?php foreach ($feature_list as $key => $feature) { ?>
                   <div class="pj-our-service--featrue-item pj-accordion-item-js <?php if(!empty($feature['is_active'])) echo 'pj-is-active'; ?>">
                     <?php if(!empty($feature['title'])){ ?>
-                      <h4 class="pj-featue-title pj-accordion-toggle-js">
+                      <h4 class="pj-featue-title pj-accordion-toggle-js" data-index="<?php echo 'pj-index-' . $key; ?>">
                         <?php echo $feature['title']; ?>
                       </h4>
                     <?php } ?>

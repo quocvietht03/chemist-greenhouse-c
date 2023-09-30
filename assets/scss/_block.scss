@@ -106,13 +106,25 @@
     width: calc(50% + 15px);
   }
   &--image {
+    display: none;
+    position: relative;
+    background: #FFFFFF;
+    padding-bottom: 100%;
+    overflow: hidden;
     line-height: 0;
     overflow: hidden;
     border-radius: 60px;
     box-shadow: 10.1px 3.5px 25px 0px rgba(31, 65, 66, 0.40);
+    &.pj-is-active {
+      display: block;
+    }
     .pj-image {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
   &--feature-wrap {
