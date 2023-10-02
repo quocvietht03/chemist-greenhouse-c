@@ -69,6 +69,10 @@ input, textarea {
   outline: none !important;
 }
 
+.pj-site {
+  position: relative;
+  overflow: hidden;
+}
 .pj-container {
   max-width: $container-width;
   margin: 0 auto;

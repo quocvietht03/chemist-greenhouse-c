@@ -50,8 +50,13 @@
     }
   }
   @media(max-width: $screen-mb) {
+    &--section {
+      background-position: center left;
+    }
     &--content {
       max-width: 420px;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 }
