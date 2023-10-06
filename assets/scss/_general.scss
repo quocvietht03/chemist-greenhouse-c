@@ -65,9 +65,6 @@ a {
   text-decoration: none;
   -webkit-transition: all .3s;
   transition: all .3s;
-  &:hover {
-    color: $CGH-Green;
-  }
 }
 input, textarea {
   outline: none !important;
