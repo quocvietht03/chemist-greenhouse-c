@@ -19,6 +19,9 @@ body:not(.home) {
   }
   .pj-site-content {
     padding: 253px 0 80px;
+    @media(max-width: $screen-sm-tablet) {
+      padding: 218px 0 80px;
+    }
   }
 }
 
