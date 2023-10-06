@@ -5,7 +5,9 @@
  */
 
 get_header();
-
+?>
+<div class="pj-container">
+<?php
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();
@@ -26,5 +28,7 @@ while ( have_posts() ) :
 		comments_template();
 	}
 endwhile; // End of the loop.
-
+?>
+</div>
+<?php
 get_footer();
