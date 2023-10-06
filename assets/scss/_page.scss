@@ -6,14 +6,24 @@ body:not(.home) {
       background: #FFFFFF;
       -webkit-box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
       box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+      .pj-main-header {
+        padding: 25px 0;
+      }
     }
     .pj-main-header {
       background: transparent;
+      padding: 36px 0;
       -webkit-box-shadow: none;
       box-shadow: none;
     }
   }
   .pj-site-content {
     padding: 253px 0 80px;
+  }
+}
+
+.page-template-default {
+  a {
+    color: $CGH-Green;
   }
 }

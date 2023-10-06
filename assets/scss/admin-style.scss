@@ -22,6 +22,7 @@
   }
 }
 
+.block-editor-page,
 .pj-acf-page-builder {
   .editor-styles-wrapper {
     font-family: $main-font;
@@ -69,6 +70,9 @@
       text-decoration: none;
       -webkit-transition: all .25s;
       transition: all .25s;
+    }
+    ul, ol {
+      font-family: $main-font;
     }
   }
   .pj-container {
