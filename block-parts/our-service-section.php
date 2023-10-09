@@ -76,7 +76,7 @@ if(!empty($style)) {
         <div class="pj-our-service--image-feature pj-our-service--image-feature-js <?php if(!empty($content_reverse)) echo 'pj-content-reverse'; ?>">
           <div class="pj-our-service--image-wrap">
             <?php foreach ($feature_list as $key =>$feature) { ?>
-              <div class="pj-our-service--image pj-our-service--image-js <?php if(!empty($feature['is_active'])) echo 'pj-is-active'; ?>" data-index="<?php echo 'pj-index-' . $key; ?>">
+              <div class="pj-our-service--image pj-our-service--image-js" data-index="<?php echo 'pj-index-' . $key; ?>">
                 <?php if(!empty($feature['image'])){ ?>
                   <img src="<?php echo $feature['image']['url'] ?>" class="pj-image" alt="<?php echo $feature['image']['title'] ?>">
                 <?php } ?>
