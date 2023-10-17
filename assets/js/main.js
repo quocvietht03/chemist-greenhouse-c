@@ -58,6 +58,6 @@
 	jQuery(window).on('scroll', function() {
 		PjHeaderStick();
 
-	});
+	}); 
 
 })(jQuery);
