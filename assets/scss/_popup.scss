@@ -48,8 +48,15 @@
     right: 20px;
     width: 30px;
     height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #FFFFFF;
     z-index: 9;
+    svg {
+      width: 24px;
+      height: auto;
+    }
   }
   .pj-popup-content {
     position: relative;
@@ -72,6 +79,15 @@
     &::-webkit-scrollbar-thumb {
     	background-color: #b2b2b2;
       border-radius: 10px;
+    }
+  }
+  @media(max-width: 920px) {
+    .pj-btn-close {
+      background: $CGH-Forest;
+      border-radius: 4px;
+      svg {
+        width: 16px;
+      }
     }
   }
 }
