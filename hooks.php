@@ -67,7 +67,7 @@ function pj_add_booking_form_popup() {
       <div class="pj-popup-content">
         <?php
           if(!empty($bk_form_if)) {
-            echo $bk_form_if; 
+            echo $bk_form_if;
           }else {
             echo "Enter booking form iframe on CGH Settings.";
           }

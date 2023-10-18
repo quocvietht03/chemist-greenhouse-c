@@ -25,12 +25,23 @@
   .gfield textarea.large {
     height: 185px;
   }
+  .gform_heading .gform_title {
+    text-align: center;
+  }
   .gform_fields {
     grid-gap: 24px;
   }
   .gform_footer,
   .gform_page_footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
+    .gform_ajax_spinner  {
+      position: absolute;
+      top: 35px;
+      right: 20px;
+    }
   }
   .gfield_label {
     font-size: 17px;
