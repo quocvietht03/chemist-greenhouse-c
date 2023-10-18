@@ -34,7 +34,7 @@
 	/* Easy Scroll */
 	function PjEasingScroll() {
 		var $root = $('html, body');
-		$('.__btn-find-store, .pj-primary-menu ul.pj-menu-wrapper > li > a').on('click', function(e) {
+		$('.__btn-find-store, .pj-primary-menu ul.pj-menu-wrapper > li:not(.pj-open-popup-link) > a').on('click', function(e) {
 			e.preventDefault();
 			var href = $.attr(this, 'href');
 			$root.animate({
@@ -44,10 +44,31 @@
 		});
 	}
 
+	/* Quick Popup */
+	function PjQuickPopup() {
+		$('.pj-open-popup-link, .pj-open-popup-link > a').on('click', function(e) {
+			e.preventDefault();
+
+			var href = $.attr(this, 'href');
+			if($(href).length > 0) {
+				$('body').addClass('pj-hidden-scroll');
+				$(href).addClass('pj-is-show');
+			}
+		});
+
+		$('.pj-popup-wrapper .pj-btn-close').on('click', function(e) {
+			e.preventDefault();
+
+			$('body').removeClass('pj-hidden-scroll');
+			$(this).parent().removeClass('pj-is-show');
+		});
+	}
+
 	jQuery(document).ready(function($) {
 		PjHeaderStick();
     PjToggleMenuMobile();
     PjEasingScroll();
+		PjQuickPopup();
 
 	});
 

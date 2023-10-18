@@ -1,0 +1,77 @@
+.pj-hidden-scroll {
+  overflow: hidden !important;
+}
+.pj-popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(54, 134, 63);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  &.pj-is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  &.pj-booking-form-popup {
+    padding: 0;
+    .pj-popup-content {
+      max-width: 100%;
+      max-height: unset;
+      overflow: visible;
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      max-width: unset !important;
+      max-height: unset !important;
+      box-shadow: none !important;
+    }
+  }
+  .admin-bar & {
+    .pj-btn-close {
+      top: 52px;
+    }
+  }
+  .pj-btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    color: #FFFFFF;
+    z-index: 9;
+  }
+  .pj-popup-content {
+    position: relative;
+    max-width: 800px;
+    max-height: calc(100vh - 120px);
+    width: 100%;
+    overflow: auto;
+    background: #FFFFFF;
+    padding: 30px;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0px 0 4px 0px rgba(0,0,0,.1);
+    &::-webkit-scrollbar-track {
+    	background-color: #transparent;
+    }
+    &::-webkit-scrollbar {
+    	width: 10px;
+    	background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+    	background-color: #b2b2b2;
+      border-radius: 10px;
+    }
+  }
+}

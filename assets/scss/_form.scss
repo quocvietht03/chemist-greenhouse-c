@@ -1,0 +1,54 @@
+.gform_wrapper.gravity-theme {
+  input[type="text"], input[type="email"],
+  input[type="tel"], input[type="number"],
+  select, textarea {
+    font-size: 17px;
+    line-height: 30px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 1px solid $Mint-Green;
+    background: $White-Gradient;
+  }
+  input[type=submit] {
+    font-family: $main-font;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #FFFFFF !important;
+    background: $CGH-Green !important;
+    min-width: 200px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    margin: 0;
+    border: none;
+  }
+  .gfield textarea.large {
+    height: 185px;
+  }
+  .gform_fields {
+    grid-gap: 24px;
+  }
+  .gform_footer,
+  .gform_page_footer {
+    margin-top: 20px;
+  }
+  .gfield_label {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $CGH-Forest !important;
+    margin-bottom: 6px;
+  }
+  .gfield_required,
+  .gform_validation_errors {
+    display: none;
+  }
+  .gfield_validation_message,
+  .validation_message {
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+}

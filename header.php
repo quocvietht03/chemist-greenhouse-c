@@ -20,7 +20,6 @@
 		$site_desc = get_bloginfo( 'description', 'display' );
 		$site_logo = get_field('site_logo', 'options');
 		$site_logo_sticky = get_field('site_logo_sticky', 'options');
-		$site_book_appointment = get_field('site_book_appointment', 'options');
 	?>
 	<header id="pj-site-header" class="pj-site-header pj-site-header--sticky">
 		<div class="pj-container">
@@ -62,13 +61,11 @@
 						}
 					?>
 
-					<?php if(!empty($site_book_appointment)  && !empty($site_book_appointment['title'])){ ?>
-						<div class="pj-extra-buttons">
-							<a class="pj-booking--btn pj-btn pj-btn--yellow" href="<?php echo $site_book_appointment['url']; ?>" target="<?php echo $site_book_appointment['target']; ?>">
-								<?php echo $site_book_appointment['title']; ?>
-							</a>
-						</div>
-					<?php } ?>
+					<div class="pj-extra-buttons">
+						<a class="pj-booking--btn pj-btn pj-btn--yellow pj-open-popup-link" href="#pj_booking_form_popup">
+							<?php echo 'Book Appointment'; ?>
+						</a>
+					</div>
 
 					<div class="pj-menu-mb-toggle pj-menu-mb-toggle--close">
 						<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
